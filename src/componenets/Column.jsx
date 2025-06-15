@@ -26,8 +26,8 @@ const Column = ({
         <div className="flex justify-center items-center gap-3">
           <div
             className={`w-2 h-2 rounded-full ${
-              column?.id === "IN_PROGRESS" ? "bg-yellow-300" : ""
-            } ${column?.id !== "IN_PROGRESS" ? `bg-[${column?.color}]` : ""}`}
+              column.id === "IN_PROGRESS" ? "bg-yellow-300" : ""
+            } ${`bg-${column.color}`} `}
           ></div>
           <p className="font-semibold">{column.title}</p>
           <div className=" flex justify-center bg- items-center text-xs p-1 w-[20px] h-[20px] rounded-3xl bg-[#c0bfc3] ">
@@ -55,11 +55,7 @@ const Column = ({
           ""
         )}
       </div>
-      <div
-        className={`w-[96%] h-[3px]  ${
-          column?.id === "IN_PROGRESS" ? "bg-yellow-300" : ""
-        } ${column?.id !== "IN_PROGRESS" ? `bg-[${column?.color}]` : ""}`}
-      ></div>
+      <div className={`w-[96%] h-[3px] ${`bg-${column.color}`}`}></div>
 
       <div ref={setNodeRef} className="flex flex-1 flex-col gap-4">
         {Filter !== null
