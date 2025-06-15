@@ -8,7 +8,7 @@ import { setAllTasks } from "../utils/taskSlice";
 
 const COLUMNS = [
   { id: "TODO", title: "To Do", color: "[#5030E5]" },
-  { id: "IN_PROGRESS", title: "On Progress", color: "orange-300" },
+  { id: "IN_PROGRESS", title: "On Progress", color: "[#FFF176]" },
   { id: "DONE", title: "Done", color: "green-300" },
 ];
 
