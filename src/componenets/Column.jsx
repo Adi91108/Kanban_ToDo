@@ -55,7 +55,11 @@ const Column = ({
           ""
         )}
       </div>
-      <div className={`w-[96%] h-[3px] ${`bg-${column.color}`}`}></div>
+      <div
+        className={`w-[96%] h-[3px]
+      ${column?.id === "IN_PROGRESS" ? "bg-yellow-300" : ""}
+       ${`bg-${column?.color}`}`}
+      ></div>
 
       <div ref={setNodeRef} className="flex flex-1 flex-col gap-4">
         {Filter !== null
