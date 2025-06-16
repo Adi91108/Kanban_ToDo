@@ -52,7 +52,7 @@ const TodoCard = ({
         <div
           className={`rounded-md px-4 py-1 ${
             task.priority === "Low"
-              ? "text-orange-600 bg-orange-200"
+              ? "text-yellow-600 bg-yellow-200"
               : task.priority === "High"
               ? "text-red-600 bg-red-200"
               : "text-green-600 bg-green-200"

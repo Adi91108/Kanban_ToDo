@@ -19,7 +19,7 @@ const Sidebar = () => {
     },
     {
       name: "Website-redesign",
-      color: "bg-orange-300",
+      color: "bg-yellow-300",
     },
     {
       name: "Design-System",
