@@ -12,15 +12,15 @@ import { toggleMenu } from "../utils/appSlice";
 const Navbar = () => {
   const dispatch = useDispatch();
   const { logout } = useAuth0();
-  const { user} = useAuth0();
+  const { user } = useAuth0();
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
-
+  console.log(user);
   const logoutUri =
-  process.env.NODE_ENV === "development"
-    ? import.meta.env.VITE_LOGOUT_URI
-    : import.meta.env.VITE_LOGOUT_URI_PROD;
+    process.env.NODE_ENV === "development"
+      ? import.meta.env.VITE_LOGOUT_URI
+      : import.meta.env.VITE_LOGOUT_URI_PROD;
   return (
     <div className="w-full  h-[80px]  flex items-center justify-center  border-b-gray-300  border-b-[2px]">
       <div className="mx-[2%]  w-full h-full  flex  justify-start  items-center">
@@ -29,16 +29,17 @@ const Navbar = () => {
             <img src={logo} alt="logo " className="w-[20px] h-[20px]" />
             <p className="font-semibold"> Project M.</p>
           </div>
-          <div className=" pr-4 cursor-pointer" onClick={() => toggleMenuHandler()}>
+          <div
+            className=" pr-4 cursor-pointer"
+            onClick={() => toggleMenuHandler()}
+          >
             <RxDoubleArrowLeft size={20} color="gray" />
           </div>
         </div>
 
         <div className="w-full px-4 flex  flex-row   justify-end md:justify-between items-center ">
           <div className="hidden md:flex items-center">
-            <div
-              className="absolute   pl-3  hover:scale-90 "
-            >
+            <div className="absolute   pl-3  hover:scale-90 ">
               <CiSearch color="gray" size={20} />
             </div>
 
@@ -50,14 +51,16 @@ const Navbar = () => {
           </div>
           <div className=" flex justify-center items-center gap-8 ">
             <div className="  hidden md:flex justify-center items-center gap-4">
-              <CiCalendar size={20} color="gray"/>
-              <CiSquareQuestion size={20} color="gray"/>
-              <IoMdNotificationsOutline size={20} color="gray"/>
+              <CiCalendar size={20} color="gray" />
+              <CiSquareQuestion size={20} color="gray" />
+              <IoMdNotificationsOutline size={20} color="gray" />
             </div>
             <div className="flex justify-center items-center gap-4">
               <div className="hidden md:flex flex-col justify-center items-end text-sm">
                 <p className=" font-bold text-xs lg:text-md">{user.name}</p>
-                <p className="font-light text-gray-600 hidden sm:flex">Rajasthan, India</p>
+                <p className="font-light text-gray-600 hidden sm:flex">
+                  Rajasthan, India
+                </p>
               </div>
               <img
                 src={user.picture}
@@ -66,15 +69,15 @@ const Navbar = () => {
               />
               <RiArrowDownSLine size={20} className="hidden md:flex" />
               <div
-              className=" bg-[#5030E5] text-white p-3 justify-center cursor-pointer rounded-lg text-sm items-center flex"
-              onClick={() =>
-                logout({
-                  logoutParams: { returnTo: logoutUri },
-                })
-              }
-            >
-              Logout
-            </div>
+                className=" bg-[#5030E5] text-white p-3 justify-center cursor-pointer rounded-lg text-sm items-center flex"
+                onClick={() =>
+                  logout({
+                    logoutParams: { returnTo: logoutUri },
+                  })
+                }
+              >
+                Logout
+              </div>
             </div>
           </div>
         </div>
