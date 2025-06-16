@@ -32,7 +32,7 @@ const Dashboard = ({ setTodoModal }) => {
       <div className=" w-[96%] mx-4 h-full flex  flex-col gap-5 justify-center items-center ">
         <div className="w-full  flex justify-between  pr-[60px] items-center">
           <div className="flex font-semibold  text-4xl  items-center justify-center gap-3">
-            <h1 >Mobile-App</h1>
+            <h1 >TodoMobileApp</h1>
             <div className="p-1 bg-violet-200   cursor-pointer rounded-md">
               <MdEdit size={10} color="#5030E5" />
             </div>
