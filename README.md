@@ -3,7 +3,7 @@
 
 Welcome to the ultimate Todo App – engineered with modern tech, obsessive detail, and just a *sprinkle* of existential dread. It won’t write your tasks for you, but it’ll make managing them feel far cooler than it probably should.
 
-🌐 [LIVE DEMO](kanban-demo-xi2e.vercel.app) –Organize like a pro. Procrastinate like a legend.
+🌐 [LIVE DEMO](https://kanban-to-do-ten.vercel.app/) –Organize like a pro. Procrastinate like a legend.
 
 ---
 
